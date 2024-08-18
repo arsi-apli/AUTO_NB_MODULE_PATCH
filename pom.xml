@@ -7,8 +7,9 @@
     <packaging>pom</packaging>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <netbeans.version>RELEASE130</netbeans.version>
+        <netbeans.version>RELEASE220</netbeans.version>
         <netbeans.plugin.version>14.3-ZAPLI1</netbeans.plugin.version>
+        <java.version>17</java.version>
     </properties>
     <modules>
         <module>org-netbeans-core-windows-patch-impl</module>

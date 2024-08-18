@@ -43,8 +43,6 @@
                                     <outputDirectory>${project.basedir}/src/main/java</outputDirectory>
                                 </artifactItem>
                             </artifactItems>
-                            <!--                            <includes>org/netbeans/modules/search/BasicSearchForm.java</includes>
-                            <includes>org/netbeans/modules/search/Bundle.properties</includes>-->
                             <outputDirectory>${project.build.directory}/wars</outputDirectory>
                             <overWriteReleases>true</overWriteReleases>
                             <overWriteSnapshots>true</overWriteSnapshots>
@@ -84,6 +82,15 @@
                     <outputDirectory>../org-netbeans-core-windows-patch/src/main/patches</outputDirectory>              
                 </configuration>
             </plugin> 
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.12.1</version>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
     <distributionManagement>
