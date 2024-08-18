@@ -1,0 +1,32 @@
+diff --git a/src/main/java/org/netbeans/core/windows/actions/ActionUtils.java b/src/main/java/org/netbeans/core/windows/actions/ActionUtils.java
+index 042d45e..a45572c 100644
+--- a/src/main/java/org/netbeans/core/windows/actions/ActionUtils.java
++++ b/src/main/java/org/netbeans/core/windows/actions/ActionUtils.java
+@@ -46,6 +46,7 @@
+ package org.netbeans.core.windows.actions;
+ 
+ 
++import java.lang.reflect.Constructor;
+ import java.awt.event.*;
+ import java.io.IOException;
+ import java.util.*;
+@@ -99,6 +100,19 @@
+                     allBut.setEnabled(false);
+                 }
+                 actions.add(allBut);
++                List<? extends Action> actionsForPath = Utilities.actionsForPath("Windows/TabOperations");
++                for (Action a : actionsForPath) {
++                    try {
++                        Constructor<? extends Action> constructor = a.getClass().getConstructor(TopComponent.class, boolean.class);
++                        Action newInstance = constructor.newInstance(tc, true);
++                        if (mode != null && mode.getOpenedTopComponents().size() == 1) {
++                            newInstance.setEnabled(false);
++                        }
++                        actions.add(newInstance);
++
++                    } catch (Exception ex) {
++                    }
++                }
+             }
+             
+             actions.add(null); // Separator

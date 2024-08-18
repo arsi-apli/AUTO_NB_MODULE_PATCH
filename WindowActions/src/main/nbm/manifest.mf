@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+OpenIDE-Module-Layer: sk/apli/nb/windowactions/layer.xml
+OpenIDE-Module-Localizing-Bundle: sk/apli/nb/windowactions/Bundle.properties
+

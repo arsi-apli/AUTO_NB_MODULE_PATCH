@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>sk.arsi.nb.tutorial</groupId>
+    <artifactId>AUTO_NB_MODULE_PATCH</artifactId>
+    <version>01.00</version>
+    <packaging>pom</packaging>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <netbeans.version>RELEASE130</netbeans.version>
+        <netbeans.plugin.version>14.3-ZAPLI1</netbeans.plugin.version>
+    </properties>
+    <modules>
+        <module>org-netbeans-core-windows-patch-impl</module>
+        <module>org-netbeans-core-windows-patch</module>
+        <module>WindowActions</module>
+    </modules>
+</project>
